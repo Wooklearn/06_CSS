@@ -1,0 +1,79 @@
+/* THML 문서 내에 스타일 정의 -> 내부 스타일 시트 방식 */
+
+/* 속성 값과 일치하는 객체(태그, 요소) 선택 */
+div[name=name2] {
+    background: orange;
+}
+
+/* 속성 안의 값이 특정 값을 띄어쓰기 단위로 포한하는 객체 선택 */
+div[name~=name5] {
+    background: yellow;
+}
+
+/* 속성 값이 특정 값과 일치하거나 '-' 문자가 곧바로 해당 값 뒤에 붙는 객체 선택 */
+div[class|=class] {
+    background: cadetblue;
+    /* (|=) class 혹은 class- */
+}
+
+/* 속성 값을 가지고 있으며, 접두사로 값이 포함되어 있는 객체 선택 */
+div[name^=name] {
+    background: blue;
+}
+
+/* 속성 안의 값이 특정 값으로 끝나는(접미사) 객체 선택 */
+div[class$=class] {
+    color: white;
+}
+
+/* 속성 안의 값이 특정 값을 포함하는 객체 선택 */
+div[class*=div] {
+    background: rebeccapurple;
+    color: aquamarine;
+}    
+
+/* 자손 선택자 테스트 */
+#test1>h4 {
+    background: hotpink;
+}
+
+#test1>ul>li {
+    background: cyan;
+}
+
+/* 후손 선택자 테스트 */
+#test1 ul {
+    background: yellow;
+}
+
+/* 형제 관계 선택자(동위 선택자) */
+
+/* css 에서 제공하는 이벤트 관련 선택자 */
+#active-test:active {
+    background: red;
+    color: white;
+}
+
+#hover-test:hover {
+    cursor: pointer;
+    background: darkgreen;
+    color: bisque;
+    font: 50px bold;
+}
+
+input[type=checkbox]:checked {
+    width: 100px;
+    height: 100px;
+}
+
+#userId:focus, #userPwd:focus{
+    background: hotpink;
+}
+
+option:enabled {
+    background: darkred;
+}
+
+option:disabled {
+    background: red;
+}
